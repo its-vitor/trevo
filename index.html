@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevo</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var cookies = document.cookie.split("; ");
+            var tokenExists = cookies.some(function(item) {
+                return item.trim().startsWith("token=");
+            });
+
+            if (!tokenExists) {
+                window.location.href = "/pages/login.html";
+            }
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
