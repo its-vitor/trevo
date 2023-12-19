@@ -106,11 +106,6 @@ input[type="date"] {
     color: var(--gray);
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-}
-
 #login
 {
     display: none;
