@@ -15,3 +15,7 @@ function login() {
   document.getElementById("loginButton").classList.add("active");
   document.getElementById("registerButton").classList.remove("active");
 }
+
+function menuBar() {
+  
+}

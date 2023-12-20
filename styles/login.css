@@ -33,7 +33,7 @@ section {
   background-color: var(--black);
   border-radius: 10px;
   max-width: 500px;
-  min-width: 500px;
+  min-width: 400px;
   overflow: hidden;
   border: 2px solid var(--green);
 }
@@ -60,7 +60,7 @@ section {
 
 .login-banner img,
 .register-banner img {
-  width: 500px;
+  width: 100%;
   padding: 0px 0px 20px 0px;
 }
 
@@ -144,13 +144,49 @@ input[type="date"] {
   display: block;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   #login-label {
-    max-width: 350px;
+    max-width: 400px;
+    min-width: 300px;
   }
 
-  body {
-    background: linear-gradient(to bottom, var(--green), var(--dark-green));
+  .login-banner,
+  .register-banner {
+    align-self: auto;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .login-banner,
+  .register-banner {
+    align-self: auto;
+    width: 70%;
+  }
+
+  .login-banner img,
+  .register-banner img {
+    align-self: normal;
+    width: 100%;
+  }
+
+  #login-label {
+    align-self: auto;
+    max-width: 300px;
+    min-width: 300px;
+    margin-bottom: 50px;
+  }
+
+  .login-banner p,
+  .register-banner p {
+    color: var(--gray);
+    width: 300px;
   }
 }
 

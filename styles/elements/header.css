@@ -28,6 +28,10 @@ header ul li
     list-style-type: none;
 }
 
+#menu-button {
+    display: none;
+}
+
 div#profile
 {
     display: flex;
@@ -72,3 +76,25 @@ div#profile:hover span.icon img[src="../images/no-profile-black.png"]
     display: block;
 }
   
+
+@media screen and (max-width: 700px) {
+    #panel {
+        display: none;
+      }
+    
+    #menu-button {
+        display: block;
+    }
+    
+    #menu-button button {
+        background-color: var(--transparent);
+        border: none;
+        outline: none;
+        font-size: 30px;
+        width: 30px;
+    }
+
+    #menu-button button i {
+        color: var(--green);
+    }
+}
