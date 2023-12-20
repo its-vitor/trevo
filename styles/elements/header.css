@@ -1,0 +1,74 @@
+@import url(../colors.css);
+
+header
+{
+    background: linear-gradient(to bottom, var(--gradient-green), var(--black));
+    padding: 10px 20px;
+    margin: 0px 0px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a img 
+{
+    width: 50px;
+}
+
+header ul
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px 20px;
+}
+
+header ul li 
+{   
+    list-style-type: none;
+}
+
+div#profile
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray);
+    background-color: var(--transparent);
+    padding: 5px 20px;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+div span.icon img
+{   
+    margin: 0px 8px;
+    width: 35px;
+}
+
+div#profile:hover
+{   
+    color: var(--black);
+    background-color: var(--green);
+}
+
+div span.icon img[src="../images/no-profile.png"] 
+{
+    display: block;
+}
+  
+div span.icon img[src="../images/no-profile-black.png"] {
+    display: none;
+}
+  
+div#profile:hover span.icon img[src="../images/no-profile.png"] 
+{
+    display: none;
+}
+  
+div#profile:hover span.icon img[src="../images/no-profile-black.png"] 
+{
+    display: block;
+}
+  
