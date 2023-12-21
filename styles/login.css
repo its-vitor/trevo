@@ -4,7 +4,6 @@
 * {
   font-family: Nunito;
   transition: all 0.5s ease;
-  color: var(--gray);
 }
 
 #login,
@@ -19,6 +18,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: "Nunito", sans-serif;
+  color: var(--gray);
 }
 
 section {
