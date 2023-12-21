@@ -41,6 +41,7 @@ section div#presentation {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    width: 70%;
 }
 
 section div#presentation img {
@@ -53,6 +54,8 @@ section div#presentation h1 {
     color: var(--green);
     margin: 0;
     padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 section div#presentation p {
@@ -169,6 +172,10 @@ section div#presentation div a:hover, section div#blogs div div a:hover {
 
 @media screen and (max-width: 1500px) {
 
+    section div#presentation h1 {
+        font-size: 50px;
+    }
+
     section div#informational div img{
         width: 300px;
     }
@@ -177,8 +184,6 @@ section div#presentation div a:hover, section div#blogs div div a:hover {
         flex-wrap: wrap;
         justify-content: center;
     }
-
-
   }
 
 @media screen and (max-width: 1000px) {
@@ -189,6 +194,7 @@ section div#presentation div a:hover, section div#blogs div div a:hover {
     section div#presentation {
         flex-direction: column;
         align-items: center;
+        width: 90%;
     }
 
     section div#presentation div {
