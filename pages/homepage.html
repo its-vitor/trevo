@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/homepage.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trevo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" 
+    rel="stylesheet"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="../images/logo.png" alt="" /></a>
+        <div id="panel">
+            <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Artists</a></li>
+            <li><a href="">Posts</a></li>
+            <li><a href="">Settings</a></li>
+            <li><a href="">Contact</a></li>
+            <div id="profile">
+                <p>Login</p>
+                <span class="icon" id="profile-white"
+                ><img src="../images/no-profile.png" alt=""
+                /></span>
+                <span class="icon" id="profile-black"
+                ><img src="../images/no-profile-black.png" alt=""
+                /></span>
+            </div>
+            </ul>
+        </div>
+        <div id="menu-button">
+            <button onclick="menuBar()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+    <section>
+        <div id="presentation">
+            <div>
+                <img src="../images/banner-presentation.svg" alt="">
+            </div>
+            <div>
+                <h1>Welcome to Trevo</h1>
+                <p>Discover and appreciate art at Trevo! Browse through the portfolios of the most talented artists or create your own to boost your artistic career.</p>
+                <div>
+                    <a href="login.html">Sign up for Trevo!</a>
+                    <hr>
+                    <a href="">Meet the Artists</a>
+                </div>
+            </div>
+        </div>
+        <div id="apps">
+            <p>Associate Trevo with your favorite apps</p>
+            <div>
+                <img src="../images/logos/facebook.png" alt="">
+                <img src="../images/logos/instagram.png" alt="">
+                <img src="../images/logos/twitter.png" alt="">
+                <img src="../images/logos/youtube.png" alt="">
+                <img src="../images/logos/pinterest.png" alt="">
+                <img src="../images/logos/imgbb.png" alt="">
+                <img src="../images/logos/amino.jpg" alt="">
+            </div>
+        </div>
+        <div id="cards">
+            <div>
+                <h1><i class="fa-regular fa-image"></i></h1>
+                <h2>Organize your portfolio</h2>
+                <p>At Trevo, you can create a personalized portfolio, divided into categories, with images, titles, and descriptions. You can even separate your works by prices for auctions or commissions.</p>
+            </div>
+            <div>
+                <h1><i class="fa-solid fa-cart-shopping"></i></h1>
+                <h2>Enter the market</h2>
+                <p>Trevo is more than a portfolio platform, it's a gateway to the artistic job market. Whether as a freelancer or a professional, Trevo helps boost your career.</p>
+            </div>
+            <div>
+                <h1><i class="fa-solid fa-shield-halved"></i></h1>
+                <h2>Safety first</h2>
+                <p>Trevo prioritizes safety. Our platform has multiple stages of security, protecting both the user and the server, to ensure a safe and reliable experience.</p>
+            </div>
+        </div>
+        <div id="informational">
+            <div>
+                <h1>Idealizing dreams</h1>
+                <hr>
+                <p>Artists need a hub for socials, portfolio, pricing, and artwork analytics. This enhances engagement, communication, and self-improvement in the competitive art world. </p>
+            </div>
+            <div>
+                <img src="../images/banner-informational.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <script>
+        window.addEventListener('scroll', function() {
+            var elements = document.querySelectorAll('section div#cards div, section div#informational div');
+            var windowHeight = window.innerHeight;
+
+            for (var i = 0; i < elements.length; i++) {
+                var rect = elements[i].getBoundingClientRect();
+
+                if (rect.top < windowHeight / 1.5) {
+                    elements[i].style.setProperty('animation', 'emerge 2s forwards');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

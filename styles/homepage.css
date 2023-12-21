@@ -1,0 +1,168 @@
+@import url(colors.css);
+@import url(elements/header.css);
+
+* {
+    font-family: Nunito;
+    transition: all 0.5s ease;
+}
+
+body {
+    background: linear-gradient(to right, var(--black), var(--black));
+    height: 100vh;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    color: var(--gray);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 400px;
+}
+
+section a {
+    color: var(--gray);
+}
+
+@keyframes up-down {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes emerge {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+section div#presentation {
+    margin: 100px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+section div#presentation img {
+    width: 300px;
+    animation: up-down 2s ease-in-out infinite;
+}
+
+section div#presentation h1 {
+    font-size: 70px;
+    color: var(--green);
+    margin: 0;
+    padding: 0;
+}
+
+section div#presentation p {
+    font-size: 20px;
+    width: 600px;
+}
+
+section div#presentation hr {
+    margin: 0px 0px 10px 0px;
+    border: 1px solid var(--green);
+}
+
+section div#presentation div div {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+section div#presentation div a {
+    padding: 10px 20px;
+    margin: 10px 20px;
+    background-color: var(--transparent);
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+section div#presentation div a:hover {
+    background-color: var(--green);
+    color: var(--black);
+    box-shadow: 0 0 20px var(--shadow-green);
+}
+
+section div#apps {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section div#apps p {
+    color: var(--green);
+    font-size: 20px;
+}
+
+section div#apps div {
+    display: flex;
+    gap: 30px;
+}
+
+section div#apps div img {
+    width: 50px;
+    border-radius: 100%;
+    filter: brightness(50%);
+}
+
+section div#apps div img:hover {
+    box-shadow: 0 0 20px var(--shadow-green);
+    filter: brightness(100%);
+}
+
+section div#cards {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+section div#cards div {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+}
+
+section div#cards div h1 i {
+    color: var(--green);
+    margin: 0;
+}
+
+section div#informational {
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+section div#informational div {
+    width: 600px;
+}
+
+section div#informational div img{
+    width: 500px;
+}
+
+section div#informational div h1 {
+    font-size: 50px;
+    color: var(--green);
+    margin: 0;
+    padding: 0;
+}
+
+section div#cards div, section div#informational div {
+    opacity: 0;
+}
+
+section div#cards div:hover {
+    transform: translateY(10px);
+}
