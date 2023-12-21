@@ -77,6 +77,8 @@ section div#presentation div a {
     border: 1px solid var(--green);
     border-radius: 10px;
     text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 section div#apps {
@@ -151,65 +153,6 @@ section div#informational div h1 {
     padding: 0;
 }
 
-section div#blogs {
-    margin: 50px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-section div#blogs div {
-    display: flex;
-    flex-direction: row;
-}
-
-section div#blogs div div.card {
-    margin: 20px;
-    padding: 20px;
-    border: 2px solid var(--green);
-    border-radius: 10px;
-    width: 400px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: left;
-}
-
-section div#blogs p {
-    text-align: center;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-section div#blogs h1 {
-    font-size: 70px;
-    color: var(--green);
-    margin: 0;
-    padding: 0;
-}
-
-section div#blogs div p {
-    text-align: left;
-    font-size: 17px;
-    margin: 0;
-    padding: 0;
-}
-
-section div#blogs div div.card a {
-    padding: 10px 30px;
-    margin: 20px 20px;
-    background-color: var(--transparent);
-    border: 1px solid var(--green);
-    border-radius: 10px;
-    font-size: 20px;
-    text-decoration: none;
-    position: absolute;
-    bottom: 0;
-}
-
 section div#cards, section div#informational div, section div#blogs {
     opacity: 0;
 }
@@ -225,7 +168,7 @@ section div#presentation div a:hover, section div#blogs div div a:hover {
 }
 
 @media screen and (max-width: 1500px) {
-    
+
     section div#informational div img{
         width: 300px;
     }
@@ -234,10 +177,11 @@ section div#presentation div a:hover, section div#blogs div div a:hover {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+
   }
 
 @media screen and (max-width: 1000px) {
-
     section div#informational {
         flex-direction: column;
     }
@@ -251,6 +195,11 @@ section div#presentation div a:hover, section div#blogs div div a:hover {
         justify-content: center;
     }
 
+    section div#cards div {
+        width: 70%;
+        height: 70%;
+    }
+
     section div#presentation h1 {
         font-size: 40px;
     }
@@ -259,8 +208,28 @@ section div#presentation div a:hover, section div#blogs div div a:hover {
         width: 300px;
     }
 
-    section div#blogs div, section div#cards {
+    section div#cards {
         flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    section div#presentation h1 {
+        font-size: 35px;
+    }
+
+    section div#presentation p {
+        font-size: 95%;
+    }
+
+    section div#presentation #presentation-buttons{
+        flex-direction: column;
+    }
+
+    section div#apps p {
+        font-size: 105%;
         justify-content: center;
     }
 }
