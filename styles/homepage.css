@@ -80,12 +80,6 @@ section div#presentation div a {
     text-decoration: none;
 }
 
-section div#presentation div a:hover {
-    background-color: var(--green);
-    color: var(--black);
-    box-shadow: 0 0 20px var(--shadow-green);
-}
-
 section div#apps {
     margin-top: 50px;
     display: flex;
@@ -159,10 +153,74 @@ section div#informational div h1 {
     padding: 0;
 }
 
-section div#cards div, section div#informational div {
+section div#blogs {
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section div#blogs div {
+    display: flex;
+    flex-direction: row;
+}
+
+section div#blogs div div {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+section div#blogs p {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+section div#blogs h1 {
+    font-size: 70px;
+    color: var(--green);
+    margin: 0;
+    padding: 0;
+}
+
+section div#blogs div p {
+    text-align: left;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+section div#blogs div div a {
+    padding: 10px 30px;
+    margin: 20px 20px;
+    background-color: var(--transparent);
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+}
+
+section div#cards, section div#informational div, section div#blogs {
     opacity: 0;
 }
 
-section div#cards div:hover {
-    transform: translateY(10px);
+section div#cards div:hover, section div#blogs div div:hover {
+    transform: translateY(-10px);
+}
+
+section div#presentation div a:hover, section div#blogs div div a:hover {
+    background-color: var(--green);
+    color: var(--black);
+    box-shadow: 0 0 20px var(--shadow-green);
 }
